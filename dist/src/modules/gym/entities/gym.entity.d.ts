@@ -1,0 +1,38 @@
+import { BaseModel } from 'src/utils/base.model';
+import { Business_Hour } from './business_hour.entity';
+import { Amenity } from './amenity.entity';
+import { User } from 'src/modules/user/entity/user.entity';
+import { GymCategorySubCategory } from './gym.category.subcategory.entity';
+import { Instructor } from 'src/modules/instructor/entities/instructor.entity';
+import { Class } from 'src/modules/class/entities/class.entity';
+import { FinancialDetails } from '../dto/financial-details.interface';
+export declare class Gym extends BaseModel {
+    gymCategorySubcategories: GymCategorySubCategory[];
+    ownerEmail: string;
+    ownerPhoneNumber: string;
+    ownerName: string;
+    birthDate: Date;
+    businessName: string;
+    businessEmail: string;
+    businessAddress: string;
+    businessPlaceId: string;
+    businessContact: string;
+    communicationAddress: string;
+    photos: string;
+    coverPhoto: string;
+    category: number;
+    description: string;
+    stepName: string;
+    businessHours: Business_Hour[];
+    waiver: string;
+    waiverName: string;
+    amenities: Amenity[];
+    user: User;
+    financialDetails: FinancialDetails;
+    googleBusinessProfile: string;
+    registrationMode: number;
+    status: number;
+    instructors: Instructor[];
+    classes: Class[];
+    stripeAccountId: string;
+}
